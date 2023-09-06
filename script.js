@@ -52,7 +52,7 @@ document.getElementById('root').innerHTML = categories.map((item) =>
             </div>
             <div class='bottom'>
                 <p>${title}</p>
-                <h2>${price}</h2>` +
+                <h2>${price} ugx</h2>` +
                 "<button onclick='addtocart("+(i++)+")'>Add to cart</button>" +
             `</div>
         </div> `
