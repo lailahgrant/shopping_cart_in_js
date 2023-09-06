@@ -74,6 +74,10 @@ function delElement(a) {
 
 function displayCart(a) {
     let j = 0;
+
+    // count items in the cart
+    document.getElementById("count").innerHTML = cart.length;
+
     if (cart.length == 0) {
         document.getElementById('cartItem').innerHTML = "Your Cart is empty";
     } else { 
