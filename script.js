@@ -67,11 +67,16 @@ function addtocart(a) {
     displayCart();
 }
 
+function delElement(a) {
+    cart.splice(a, 1);
+    displayCart(); 
+}
+
 function displayCart(a) {
     let j = 0;
     if (cart.length == 0) {
         document.getElementById('cartItem').innerHTML = "Your Cart is empty";
-    } else {
+    } else { 
         document.getElementById('cartItem').innerHTML = cart.map((items) => {
             var { image, title, price } = items;
             return (
