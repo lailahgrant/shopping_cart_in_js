@@ -35,4 +35,33 @@ const product = [
         title: 'Tea Kettle',
         price: '600,000',
     },
-]
+];
+
+const categories = [...new Set(product.map((item) =>
+{ return item }))]
+    
+let i = 0;
+
+document.getElementById('root').innerHTML = categories.map((item) =>
+{
+    var { image, title, price } = item;
+    return (
+        `<div class='box'>
+            <div class='img-box'>
+                <img class='images' src=${image} >
+            </div>
+            <div class='bottom'>
+                <p>${title}</p>
+                <h2>${price}</h2>` +
+                "<button onclick='addtocart("+(i++)+")'>Add to cart</button>" +
+            `</div>
+        </div> `
+    )
+}).join('')
+
+
+
+
+
+
+
